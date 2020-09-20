@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
+import json
 
 
 app = Flask(__name__)
@@ -19,12 +20,15 @@ def send_data():
     errors = []
     results = {}
     try:
-        first_name = request.form['first_name']
-        favourite_colour = request.form['favourite_colour']
-        mongo.db.people.insert({"name" : first_name, "colour": favourite_colour})
+        data = json.loads(request.data.decode())
+        first_name = data["first_name"]
+        colour = data["colour"]
+        mongo.db.people.insert_one({"name" : first_name,
+                                    "colour": colour})
     except:
+        print("Errors... :-(")
         errors.append("Couldn't get text")
-    
+
     return render_template('index.html', errors=errors, results=results)
 
 if __name__ == '__main__':

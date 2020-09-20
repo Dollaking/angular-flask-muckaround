@@ -1,8 +1,20 @@
 # JAJAC Test CRUD App
 
+This is a basic CRUD application that uses Angular, Python, Flask and MongoDB.
+
 ## Resources
 
-https://realpython.com/flask-by-example-integrating-flask-and-angularjs/
+### Base resource
+
+This project was adapted from this [Real Python Tutorial](https://realpython.com/flask-by-example-integrating-flask-and-angularjs/)
+
+### PyMongo
+
+https://www.w3schools.com/python/python_mongodb_getstarted.asp
+
+### Virtual Environments
+
+https://docs.python.org/3/tutorial/venv.html
 
 ## Requirements
 
@@ -11,7 +23,13 @@ https://realpython.com/flask-by-example-integrating-flask-and-angularjs/
 - python3-flask
 - mongodb
 
-## Setting up a virtual Environment
+For all others see `requirements.txt`
+
+## Setup
+
+To run this locally you will need to have a running version of MongoDB as well as the required Python packages.
+
+### Setting up a virtual Environment
 
 A virtual environment allows us to keep all our required packages within our project. We then add the packages to our `.gitignore`. This stops our project from vommitting all over our system and leaving redundant packages once the project is finished. If you don't care, just run `pip3 install -r requirements.txt`
 
@@ -22,7 +40,6 @@ From root directory:
 Create the python virtual environment directory (ignored in `.gitignore`):
 
 `python3 -m venv env`
-
 
 #### Setting your virtual environment in your current terminal
 
