@@ -20,22 +20,22 @@ https://docs.python.org/3/tutorial/venv.html
 
 - python3
 - python3-venv
-- python3-flask
 - mongodb
+- Mongo Compass (optional)
 
 For all others see `requirements.txt`
 
 ## Setup
 
-To run this locally you will need to have a running version of MongoDB as well as the required Python packages.
+To run this locally you will need to have a running version of MongoDB as well as the required Python packages. These can be installed using pip from within the virtual environment (see below).
 
 ### Setting up a virtual Environment
 
-A virtual environment allows us to keep all our required packages within our project. We then add the packages to our `.gitignore`. This stops our project from vommitting all over our system and leaving redundant packages once the project is finished. If you don't care, just run `pip3 install -r requirements.txt`
+A virtual environment allows us to keep all our required packages within our project. We then add the packages to our `.gitignore`. This stops our project from vommitting all over our system and leaving redundant packages once the project is finished. If you don't care, just run `pip3 install -r requirements.txt` and remember to update it manually whenever you add something new.
 
 #### Creating the virtual environment
 
-From root directory:
+From root directory of our project:
 
 Create the python virtual environment directory (ignored in `.gitignore`):
 
@@ -52,6 +52,17 @@ Source that virtual environment before each run
 Leaving the virtual:
 
 `deactivate`
+
+#### Installing required packages
+
+Source the virtual environment so that packages are stored within our project
+
+`source env/bin/activate`
+
+
+Install the packages specified in `requirements.txt`
+
+`pip3 install -r requirements.txt`
 
 #### Adding packages to the project
 
@@ -70,7 +81,7 @@ Saving this package to the list of requirements:
 
 ## Running the project
 
-#### Locally 
+#### Locally
 
 `source env/bin/activate`
 
